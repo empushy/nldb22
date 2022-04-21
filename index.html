@@ -10,9 +10,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
         <style>
             html {
               scroll-behavior: smooth;
@@ -43,11 +44,11 @@
 
 				<!-- Header -->
 					<header id="header" class="header">
-						<a href="https://nldb2022.prhlt.upv.es/" target="_blank" class="logo"><strong>Paper Accepted @ NLDB22</strong></a>
+						<a href="https://nldb2022.prhlt.upv.es/" target="_blank" class="logo"><strong>Paper Accepted @ NLDB22 🎉</strong></a>
 						<nav>
                             <!--<a href="/elements.html">Authors</a>
                             <a href="/elements.html">Resources</a>-->
-                            <a href="#contact">Contact</a>
+                            <a href="#contact">📧 Contact</a>
 						</nav>
 					</header>
 
@@ -68,18 +69,131 @@
 					<section class="main">
 						<header class="invert accent2">
 							<h1>Extracting and Understanding Call-to-actions<br>of Push-notifications</h1>
-							<p>Beatriz Esteves, Kieran Fraser, Shridhar Kulkarni, Owen Conlan, Víctor Rodríguez-Doncel</p>
+							<h5>Beatriz Esteves, Kieran Fraser, Shridhar Kulkarni, Owen Conlan, Víctor Rodríguez-Doncel</h5>
                             
 						</header>
                         <div class="row gtr-200">
 							<div class="col-12 col-12-medium">
                                 
                                 <span class="image left shadow-1" style="width: 45%;"><img src="images/paper_image.png" alt="" /></span>
-                                <h4>Abstract</h4>
-                                <p>Push-notifications are a communication tool leveraged by many apps to disseminate information, engage with their user base and provide a means of encouraging users to take particular actions. The nuanced intent behind a push is not always distinguishable to the end-user at moments of delivery. This work explores the text content of notifications pushed by a number of prominent apps in the marketplace over the period of 463 days. We present a new ontology that defines notification Call-to-action (CTA) labels in use today. This facilitates greater understanding behind a push and is a step towards standardisation for marketing teams. Subsequently, we then present results of a notification dataset annotated with our CTA labels and propose and evaluate a CTA text classification task, which could facilitate improved solutions for both users subscribed to, and marketers creating, push-notifications.</p>
+                                <h4>Paper Overview</h4>
+                                <p style="text-align: justify">Push-notifications are a communication tool leveraged by many apps to disseminate information, engage with their user base and provide a means of encouraging users to take particular actions. The nuanced intent behind a push is not always distinguishable to the end-user at moments of delivery. This work explores the text content of notifications pushed by a number of prominent apps in the marketplace over the period of 463 days. We present a new ontology that defines notification Call-to-action (CTA) labels in use today. This facilitates greater understanding behind a push and is a step towards standardisation for marketing teams. Subsequently, we then present results of a notification dataset annotated with our CTA labels and propose and evaluate a CTA text classification task, which could facilitate improved solutions for both users subscribed to, and marketers creating, push-notifications.</p>
+                                
                             </div>
                         </div>
 					</section>
+                
+                    <section class="main special invert accent3">
+						<h4>Additional resources</h4>
+                        <ol style="list-style-position: inside;">
+                            <li><a href="#orsd">Short-version ORSD for the APN ontology</a></li>
+                            <li><a href="#numCTALabels">Notifications assigned to CTA labels</a></li>
+                        </ol>
+					</section>
+                
+                <section id="orsd" class="main">
+                    <div class="row gtr-200">
+                        <div class="col-12 col-12-medium">
+                            <h4>Short-version ORSD for the APN ontology</h4>
+                            <div class="table-wrapper">
+                                <table class="alt">
+                                    <thead>
+                                        <tr>
+                                            <th>CQG1. Related to push-notification services</th>
+                                            <th>CQG2. Related to push-notification categorization</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>CQ1. What is the content of the push-notification?</td>
+                                            <td>CQ4. What is the call-to-action (CTA) of the notification?</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CQ2. Which service / application pushed the notification?</td>
+                                            <td>CQ5. Does the notification belong to a specific campaign type?</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CQ3. What is the application type in relation to its content?</td>
+                                            <td> CQ6. How urgent is the notification?</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>CQ7. Does the notification have a clear target audience?</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>CQ8. Does the notification contain features which indicate personalization?</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="numCTALabels" class="main">
+                    <div class="row gtr-200">
+                        <div class="col-6 col-12-medium">
+                            <h4>Notifications assigned to CTA labels</h4>
+                            <div class="table-wrapper">
+                                <table class="alt">
+                                    <thead>
+                                        <tr>
+                                            <th>CTA label</th>
+                                            <th># Notifications</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>discover</td>
+                                            <td>2633</td>
+                                        </tr>
+                                        <tr>
+                                            <td>awareness</td>
+                                            <td>1394</td>
+                                        </tr>
+                                        <tr>
+                                            <td>purchase</td>
+                                            <td>1172</td>
+                                        </tr>
+                                        <tr>
+                                            <td>reminder/advice/tip</td>
+                                            <td>763</td>
+                                        </tr>
+                                        <tr>
+                                            <td>social</td>
+                                            <td>577</td>
+                                        </tr>
+                                        <tr>
+                                            <td>watch</td>
+                                            <td>356</td>
+                                        </tr>
+                                        <tr>
+                                            <td>play</td>
+                                            <td>310</td>
+                                        </tr>
+                                        <tr>
+                                            <td>feedback</td>
+                                            <td>278</td>
+                                        </tr>
+                                        <tr>
+                                            <td>claim</td>
+                                            <td>151</td>
+                                        </tr>
+                                        <tr>
+                                            <td>download</td>
+                                            <td>120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>account management</td>
+                                            <td>99</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 				<!-- Section -->
 					<!--<section class="main">
@@ -176,12 +290,12 @@
 							</li>
 							<li>
 								<span class="icon major alt fa-map"></span>
-								<p>ADAPT Centre,<br/> Trinity College Dublin, Ireland
+								<p>ADAPT Centre,<br/>Trinity College Dublin,<br/>Ireland
                                 </p>
 							</li>
 							<li>
 								<span class="icon major alt fa-map"></span>
-								<p>Ontology Engineering Group,<br/> Universidad Politécnica de Madrid, Spain
+								<p>Ontology Engineering Group,<br/>Universidad Politécnica de Madrid,<br/>Spain
                                 </p>
 							</li>
 						</ul>
@@ -189,7 +303,8 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright"></p>
+						<!--<p class="copyright"></p>-->
+                        <span class="image fit"><img src="images/ei-banner.png" alt="" /></span>
 						<!--<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
