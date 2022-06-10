@@ -78,7 +78,10 @@
                                 <span class="image left shadow-1" style="width: 45%;"><img src="images/paper_image.png" alt="" /></span>
                                 <h4>Paper Overview</h4>
                                 <p style="text-align: justify">Push-notifications are a communication tool leveraged by many apps to disseminate information, engage with their user base and provide a means of encouraging users to take particular actions. The nuanced intent behind a push is not always distinguishable to the end-user at moments of delivery. This work explores the text content of notifications pushed by a number of prominent apps in the marketplace over the period of 463 days. We present a new ontology that defines notification Call-to-action (CTA) labels in use today. This facilitates greater understanding behind a push and is a step towards standardisation for marketing teams. Subsequently, we then present results of a notification dataset annotated with our CTA labels and propose and evaluate a CTA text classification task, which could facilitate improved solutions for both users subscribed to, and marketers creating, push-notifications.</p>
-                                
+                                <a href="https://doi.org/10.5281/zenodo.6630565" target="_blank" class="button btn-s">Pre-print</a>
+                                <a href="https://w3id.org/apn/" target="_blank" class="button">APN documentation</a>
+                                <a href="https://github.com/besteves4/apn" target="_blank" class="button">APN repo</a>
+
                             </div>
                         </div>
 					</section>
@@ -86,7 +89,7 @@
                     <section class="main special invert accent3">
 						<h4>Additional resources</h4>
                         <ol style="list-style-position: inside;">
-                            <li><a href="#orsd">Short-version ORSD for the APN ontology</a></li>
+                            <li><a href="#orsd">ORSD for the APN ontology</a></li>
                             <li><a href="#numCTALabels">Notifications assigned to CTA labels</a></li>
                         </ol>
 					</section>
@@ -94,38 +97,117 @@
                 <section id="orsd" class="main">
                     <div class="row gtr-200">
                         <div class="col-12 col-12-medium">
-                            <h4>Short-version ORSD for the APN ontology</h4>
+                            <h4>ORSD for the APN ontology</h4>
                             <div class="table-wrapper">
-                                <table class="alt">
-                                    <thead>
-                                        <tr>
-                                            <th>CQG1. Related to push-notification services</th>
-                                            <th>CQG2. Related to push-notification categorization</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>CQ1. What is the content of the push-notification?</td>
-                                            <td>CQ4. What is the call-to-action (CTA) of the notification?</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CQ2. Which service / application pushed the notification?</td>
-                                            <td>CQ5. Does the notification belong to a specific campaign type?</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CQ3. What is the application type in relation to its content?</td>
-                                            <td> CQ6. How urgent is the notification?</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>CQ7. Does the notification have a clear target audience?</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>CQ8. Does the notification contain features which indicate personalization?</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <table class="center">
+                                    <tr>
+                                      <th colspan=2 class="table-top">
+                                        Ontology for the Annotation of Push-Notifications
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <th colspan=2 class="table-title">
+                                        1. Purpose
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td colspan=2 class="table-cell">
+                                        The purpose of this ontology is to support the annotation and extraction of insights
+                                        from push-notification data.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th colspan=2 class="table-title">
+                                        2. Scope
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td colspan=2 class="table-cell">
+                                        The scope of this ontology is limited to the definition of a set of parameters 
+                                        that can be used to classify push-notification data, in particular its text content, 
+                                        with the end goal of creating a service which pushes more empathethic content to 
+                                        push-notification subscribers. Specifically, the notification content will be used
+                                        to categorize the notification in terms of: (i) its specific call-to-action, 
+                                        (ii) and respective marketing campaign type, (iii) its target audience, (iv) its time
+                                        sensitiveness and (v) the presence of information that can be used 
+                                        to infer personal data from the subscribers.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th colspan=2 class="table-title">
+                                        3. Implementation Language
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td colspan=2 class="table-cell">
+                                        RDF
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th colspan=2 class="table-title">
+                                        4. Intended End-Users
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td colspan=2 class="table-cell">
+                                        Organizations with Web or application services which include push-notifications
+                                        in their communication flow with customers.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th colspan=2 class="table-title">
+                                        5. Intended Uses
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td colspan=2 class="table-cell">
+                                        Use 1. Creation of multi-label classification models to automatically annotate push-notifications.<br>
+                                        Use 2. Generation of push-notification content based on annotations' model.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th colspan=2 class="table-title">
+                                        6. Ontology Requirements
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <th colspan=2 class="table-title">
+                                        a. Non-Functional Requirements
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td colspan=2 class="table-cell">
+                                        NFR 1. The ontology shall be published online with standard documentation.
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th colspan=2 class="table-title">
+                                        b. Functional Requirements: Groups of Competency Questions
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <th class="table-title">
+                                        CQG1. Related to push-notification services
+                                      </th>
+                                      <th class="table-title">
+                                        CQG2. Related to push-notification categorization
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-cell">
+                                        CQ1. What is the content of the push-notification?<br>
+                                        CQ2. Which service / application pushed the notification?<br>
+                                        CQ3. What is the application type in relation to its content?
+                                      </td>
+                                      <td class="table-cell">
+                                        CQ4. What is the call-to-action of the notification?<br>
+                                        CQ5. Does the notification belong to a specific campaign type?<br>
+                                        CQ6. How urgent is the notification?<br>
+                                        CQ7. Does the notification have a clear target audience?<br>
+                                        CQ8. Does the notification contain features which indicate personalization?
+                                      </td>
+                                    </tr>
+                                  </table>
                             </div>
                         </div>
                     </div>
@@ -136,60 +218,56 @@
                         <div class="col-6 col-12-medium">
                             <h4>Notifications assigned to CTA labels</h4>
                             <div class="table-wrapper">
-                                <table class="alt">
-                                    <thead>
-                                        <tr>
-                                            <th>CTA label</th>
-                                            <th># Notifications</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>discover</td>
-                                            <td>2633</td>
-                                        </tr>
-                                        <tr>
-                                            <td>awareness</td>
-                                            <td>1394</td>
-                                        </tr>
-                                        <tr>
-                                            <td>purchase</td>
-                                            <td>1172</td>
-                                        </tr>
-                                        <tr>
-                                            <td>reminder/advice/tip</td>
-                                            <td>763</td>
-                                        </tr>
-                                        <tr>
-                                            <td>social</td>
-                                            <td>577</td>
-                                        </tr>
-                                        <tr>
-                                            <td>watch</td>
-                                            <td>356</td>
-                                        </tr>
-                                        <tr>
-                                            <td>play</td>
-                                            <td>310</td>
-                                        </tr>
-                                        <tr>
-                                            <td>feedback</td>
-                                            <td>278</td>
-                                        </tr>
-                                        <tr>
-                                            <td>claim</td>
-                                            <td>151</td>
-                                        </tr>
-                                        <tr>
-                                            <td>download</td>
-                                            <td>120</td>
-                                        </tr>
-                                        <tr>
-                                            <td>account management</td>
-                                            <td>99</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <table class="center">
+                                    <tr>
+                                      <th class="table-title">CTA label</th>
+                                      <th class="table-title"># Notifications</th>
+                                    </tr>
+                                    <tr>
+                                      <td class="table-cell">discover</td>
+                                      <td class="table-cell">2633</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">awareness</td>
+                                        <td class="table-cell">1394</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">purchase</td>
+                                        <td class="table-cell">1172</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">reminder/advice/tip</td>
+                                        <td class="table-cell">763</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">social</td>
+                                        <td class="table-cell">577</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">watch</td>
+                                        <td class="table-cell">356</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">play</td>
+                                        <td class="table-cell">310</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">feedback</td>
+                                        <td class="table-cell">278</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">claim</td>
+                                        <td class="table-cell">151</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">download</td>
+                                        <td class="table-cell">120</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-cell">account management</td>
+                                        <td class="table-cell">99</td>
+                                    </tr>
+                                  </table>
                             </div>
                         </div>
                     </div>
@@ -303,8 +381,8 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<!--<p class="copyright"></p>-->
-                        <span class="image fit"><img src="images/ei-banner.png" alt="" /></span>
+                        <span class="image fit"><img src="images/ei-banner.png" alt="" /></span><br>
+                        <p>This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No 813497</p>
 						<!--<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook"><span class="label">Facebook</span></a></li>
